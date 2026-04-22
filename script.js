@@ -1,4 +1,6 @@
-
+// --- EINSTELLUNGEN ---
+// Füge hier deine URL aus der Google Web-App Bereitstellung ein
+const scriptURL = "https://script.google.com/macros/s/AKfycbwUxAnJkNGBkJrck4w-IlB0469Z_Rb5IHJEe9Ux7ZoWvIxpti40-fM4R-qrfdqz4Rbegw/exec";
 
 const fragen = [
     { 
@@ -18,17 +20,16 @@ const fragen = [
 let aktuelleFrageIndex = 0;
 let gesamtPunkte = 0;
 
-// --- START-PRÜFUNG ---
-if (true) {
-    document.getElementById('quiz-card').classList.remove('hidden');
-    zeigeFrage();
-} else {
-    document.getElementById('access-denied').classList.remove('hidden');
-}
+// --- DIREKTER START ---
+// Da der Key entfernt wurde, blenden wir das Quiz sofort ein
+document.getElementById('quiz-card').classList.remove('hidden');
+zeigeFrage();
 
 // --- FUNKTIONEN ---
 function zeigeFrage() {
     const frage = fragen[aktuelleFrageIndex];
+    
+    // Fortschritt & Text aktualisieren
     document.getElementById('progress').innerText = `Frage ${aktuelleFrageIndex + 1} von ${fragen.length}`;
     document.getElementById('question-text').innerText = frage.q;
     
@@ -47,6 +48,7 @@ function zeigeFrage() {
 function waehleAntwort(punkte) {
     gesamtPunkte += punkte;
     aktuelleFrageIndex++;
+
     if (aktuelleFrageIndex < fragen.length) {
         zeigeFrage();
     } else {
@@ -55,11 +57,24 @@ function waehleAntwort(punkte) {
 }
 
 function beenden() {
+    // Quiz ausblenden, Ergebnis einblenden
     document.getElementById('quiz-card').classList.add('hidden');
     document.getElementById('result-card').classList.remove('hidden');
 
-    let typ = gesamtPunkte <= 4 ? "Lerche" : (gesamtPunkte >= 8 ? "Eule" : "Taube");
+    // Typ bestimmen
+    let typ = "";
+    if (gesamtPunkte <= 4) typ = "Lerche";
+    else if (gesamtPunkte >= 8) typ = "Eule";
+    else typ = "Taube";
+
     document.getElementById('typ-name').innerText = typ;
 
-  
+    // Versand an Google Sheets (nur wenn URL eingetragen wurde)
+    if (scriptURL !== "DEINE_GOOGLE_WEB_APP_URL_HIER_EINSETZEN") {
+        fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify({ "typ": typ })
+        }).catch(err => console.log("Fehler beim Senden:", err));
+    }
 }
