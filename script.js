@@ -1,6 +1,4 @@
-// --- EINSTELLUNGEN ---
-const GEHEIMER_KEY = "event2024"; 
-const scriptURL = "DEINE_GOOGLE_WEB_APP_URL_HIER_EINSETZEN";
+
 
 const fragen = [
     { 
@@ -21,8 +19,7 @@ let aktuelleFrageIndex = 0;
 let gesamtPunkte = 0;
 
 // --- START-PRÜFUNG ---
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get('key') === GEHEIMER_KEY) {
+if (true) {
     document.getElementById('quiz-card').classList.remove('hidden');
     zeigeFrage();
 } else {
@@ -64,12 +61,5 @@ function beenden() {
     let typ = gesamtPunkte <= 4 ? "Lerche" : (gesamtPunkte >= 8 ? "Eule" : "Taube");
     document.getElementById('typ-name').innerText = typ;
 
-    // Versand an Google Sheets
-    if (scriptURL !== "DEINE_GOOGLE_WEB_APP_URL_HIER_EINSETZEN") {
-        fetch(scriptURL, {
-            method: "POST",
-            mode: "no-cors",
-            body: JSON.stringify({ "typ": typ })
-        });
-    }
+  
 }
