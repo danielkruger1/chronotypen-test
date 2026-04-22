@@ -1,0 +1,65 @@
+/* VARIABLEN FÜR FARBEN */
+:root {
+    --primary: #0078d4;
+    --primary-hover: #005a9e;
+    --bg: #f3f5f7;
+    --text: #333;
+}
+
+/* GRUNDLAYOUT */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* DIE QUIZ-KARTE */
+.card {
+    background: white;
+    width: 85%;
+    max-width: 450px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* HILFSKLASSE ZUM VERSTECKEN */
+.hidden { display: none; }
+
+/* DESIGN DER BUTTONS */
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin: 12px 0;
+    border: 2px solid #e1e4e8;
+    border-radius: 12px;
+    background: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+    border-color: var(--primary);
+    background-color: #f0f7ff;
+    transform: translateY(-2px);
+}
+
+.progress {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #a0aec0;
+    margin-bottom: 10px;
+}
+
+h2 { margin-bottom: 25px; font-weight: 700; }
