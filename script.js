@@ -65,7 +65,7 @@ function beenden() {
     let typ = "";
     if (gesamtPunkte <= 4) typ = "Lerche";
     else if (gesamtPunkte >= 8) typ = "Eule";
-    else typ = "Taube";
+    else typ = "Mischtyp";
 
     document.getElementById('typ-name').innerText = typ;
 
