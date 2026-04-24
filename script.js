@@ -4,7 +4,7 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbwUxAnJkNGBkJrck4w-Il
 const fragen = [
     { 
         q: "Wie stark bist Du von deinem Wecker abhängig, wenn Du morgens zu einer bestimmten Zeit aufstehen musst?",
-        a: [{t: "Überhaupt nicht abhängig", p: 4}, {t: "Etwas abhängig", p: 3}, {t: "Ziehmlich abhängig", p: 2}, {t: "Sehr abhängig", p: 1}] 
+        a: [{t: "Überhaupt nicht abhängig", p: 4}, {t: "Etwas abhängig", p: 3}, {t: "Ziemlich abhängig", p: 2}, {t: "Sehr abhängig", p: 1}] 
     },
     { 
         q: "Wie leicht fällt es Dir üblicherweise morgens aufzustehen?", 
@@ -12,15 +12,15 @@ const fragen = [
     },
     { 
         q: "Wie wach fühlst Du dich morgens in der ersten halben Stunde nach dem Aufwachen?", 
-        a: [{t: "Überhaupt nicht wach", p: 1}, {t: "Ein bisschen wach", p: 2}, {t: "Ziehmlich wach", p: 3}, {t: "Sehr wach", p: 4}] 
+        a: [{t: "Überhaupt nicht wach", p: 1}, {t: "Ein bisschen wach", p: 2}, {t: "Ziemlich wach", p: 3}, {t: "Sehr wach", p: 4}] 
     },
     { 
         q: "Wie ist Dein Appetit in der ersten halben Stunde nach dem Aufwachen?", 
-        a: [{t: "Sehr gering", p: 1}, {t: "Ziemlich gering", p: 2}, {t: "Ziehmlich gut", p: 3}, {t: "Sehr gut", p: 4}] 
+        a: [{t: "Sehr gering", p: 1}, {t: "Ziemlich gering", p: 2}, {t: "Ziemlich gut", p: 3}, {t: "Sehr gut", p: 4}] 
     },
     { 
         q: "Wie müde fühlst Du dich morgens in der ersten halben Stunde nach dem Aufwachen?", 
-        a: [{t: "Sehr müde", p: 1}, {t: "Ziemlich müde", p: 2}, {t: "Ziehmlich frisch", p: 3}, {t: "Sehr frisch", p: 4}] 
+        a: [{t: "Sehr müde", p: 1}, {t: "Ziemlich müde", p: 2}, {t: "Ziemlich frisch", p: 3}, {t: "Sehr frisch", p: 4}] 
     },
     { 
         q: "Wenn Du am folgenden Tag keinerlei Verpflichtungen hast, wann gehst Du dann-verglichen mit Deiner üblichen Schlafenszeit – zu Bett?", 
@@ -28,7 +28,7 @@ const fragen = [
     },
     { 
         q: "Wenn Du um 23 Uhr zu Bett gehen solltest, wie müde wärst Du dann?", 
-        a: [{t: "Überhaupt nicht müde", p: 0}, {t: "Etwas müde", p: 2}, {t: "Ziehmlich müde", p: 3}, {t: "Sehr müde", p: 5}] 
+        a: [{t: "Überhaupt nicht müde", p: 0}, {t: "Etwas müde", p: 2}, {t: "Ziemlich müde", p: 3}, {t: "Sehr müde", p: 5}] 
     },
     { 
         q: "Du musst zwei Stunden körperlich schwer arbeiten. Wenn es nur nach Deinem Wohlbefinden ginge, welche der folgenden Zeiten würdest Du wählen?", 
