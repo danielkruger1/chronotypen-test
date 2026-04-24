@@ -3,16 +3,36 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbwUxAnJkNGBkJrck4w-Il
 
 const fragen = [
     { 
-        q: "Wann bist du am produktivsten?Daniel", 
-        a: [{t: "Morgens", p: 1}, {t: "Mittags", p: 2}, {t: "Abends", p: 3}] 
+        q: "1. Wie stark bist Du von deinem Wecker abhängig, wenn Du morgens zu einer bestimmten Zeit aufstehen musst?",
+        a: [{t: "Überhaupt nicht abhängig", p: 4}, {t: "Etwas abhängig", p: 3}, {t: "Ziehmlich abhängig", p: 2}, {t: "Sehr abhängig", p: 1}] 
     },
     { 
-        q: "Wie fühlst du dich direkt nach dem Aufstehen?", 
-        a: [{t: "Fit wie ein Turnschuh", p: 1}, {t: "Brauche Kaffee", p: 2}, {t: "Bin ein Zombie", p: 3}] 
+        q: "2. Wie leicht fällt es Dir üblicherweise morgens aufzustehen?", 
+        a: [{t: "Überhaupt nicht leicht", p: 1}, {t: "Nicht sehr leicht", p: 2}, {t: "Ziemlich leicht", p: 3}, {t: "Sehr leicht", p: 4}] 
     },
     { 
-        q: "Wann gehst du meistens schlafen?", 
-        a: [{t: "Vor 22 Uhr", p: 1}, {t: "Gegen Mitternacht", p: 2}, {t: "Nach 2 Uhr", p: 3}] 
+        q: "3. Wie wach fühlst Du dich morgens in der ersten halben Stunde nach dem Aufwachen?", 
+        a: [{t: "Überhaupt nicht wach", p: 1}, {t: "Ein bisschen wach", p: 2}, {t: "Ziehmlich wach", p: 3}, {t: "Sehr wach", p: 4}] 
+    },
+    { 
+        q: "4. Wie ist Dein Appetit in der ersten halben Stunde nach dem Aufwachen?", 
+        a: [{t: "Sehr gering", p: 1}, {t: "Ziemlich gering", p: 2}, {t: "Ziehmlich gut", p: 3}, {t: "Sehr gut", p: 4}] 
+    },
+    { 
+        q: "5. Wie müde fühlst Du dich morgens in der ersten halben Stunde nach dem Aufwachen?", 
+        a: [{t: "Sehr müde", p: 1}, {t: "Ziemlich müde", p: 2}, {t: "Ziehmlich frisch", p: 3}, {t: "Sehr frisch", p: 4}] 
+    },
+    { 
+        q: "6. Wenn Du am folgenden Tag keinerlei Verpflichtungen hast, wann gehst Du dann-verglichen mit Deiner üblichen Schlafenszeit – zu Bett?", 
+        a: [{t: "Selten oder nie später", p: 4}, {t: "Weniger als eine Stunde später", p: 3}, {t: "1-2 Stunden später", p: 2}, {t: "Mehr als 2 Stunden später", p: 1}] 
+    },
+    { 
+        q: "7. Wenn Du um 23 Uhr zu Bett gehen solltest, wie müde wärst Du dann?", 
+        a: [{t: "Überhaupt nicht müde", p: 0}, {t: "Etwas müde", p: 2}, {t: "Ziehmlich müde", p: 3}, {t: "Sehr müde", p: 5}] 
+    },
+    { 
+        q: "8. Du musst zwei Stunden körperlich schwer arbeiten. Wenn es nur nach Deinem Wohlbefinden ginge, welche der folgenden Zeiten würdest Du wählen?", 
+        a: [{t: "8-10 Uhr", p: 4}, {t: "11-13 Uhr", p: 3}, {t: "15-17 Uhr", p: 2}, {t: "19-21 Uhr", p: 1}] 
     }
 ];
 
@@ -61,8 +81,8 @@ function beenden() {
 
     // Typ bestimmen
     let typ = "";
-    if (gesamtPunkte <= 4) typ = "Lerche";
-    else if (gesamtPunkte >= 8) typ = "Eule";
+    if (gesamtPunkte <= 16) typ = "Lerche";
+    else if (gesamtPunkte >= 23) typ = "Eule";
     else typ = "Mischtyp";
 
     document.getElementById('typ-name').innerText = typ;
