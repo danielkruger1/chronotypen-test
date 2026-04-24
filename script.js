@@ -19,7 +19,7 @@ const fragen = [
         a: [{t: "Sehr gering", p: 1}, {t: "Ziemlich gering", p: 2}, {t: "Ziemlich gut", p: 3}, {t: "Sehr gut", p: 4}] 
     },
     { 
-        q: " In einer Nacht musst Du für eine Nachtwache zwischen 4 und 6 Uhr wach sein. Am darauffolgenden Tag hast du keine weiteren Verpflichtungen. Welche der nachfolgenden Alternativen sagt Dir am ehesten zu?", 
+        q: "In einer Nacht musst Du für eine Nachtwache zwischen 4 und 6 Uhr wach sein. Am darauffolgenden Tag hast du keine Verpflichtungen. Was würdest du am ehesten tun?", 
         a: [{t: "Ich werde erst nach der Nachtwache zu Bett zu gehen", p: 1}, {t: "Ich werde vorher ein Nickerchen machen und nach der Nachtwache schlafen", p: 2}, {t: "Ich werde vorher richtig schlafen und hinterher noch ein Nickerchen machen", p: 3}, {t: "Ich werde nur vorher schlafen", p: 4}] 
     },
     { 

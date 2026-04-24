@@ -22,8 +22,8 @@ body {
 /* DIE QUIZ-KARTE */
 .card {
     background: white;
-    width: 85%;
-    max-width: 450px;
+    width: 90%;
+    max-width: 600px;
     padding: 40px 30px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
