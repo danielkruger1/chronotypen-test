@@ -1,10 +1,9 @@
 // --- EINSTELLUNGEN ---
-// Füge hier deine URL aus der Google Web-App Bereitstellung ein
 const scriptURL = "https://script.google.com/macros/s/AKfycbwUxAnJkNGBkJrck4w-IlB0469Z_Rb5IHJEe9Ux7ZoWvIxpti40-fM4R-qrfdqz4Rbegw/exec";
 
 const fragen = [
     { 
-        q: "Wann bist du am produktivsten?", 
+        q: "Wann bist du am produktivsten?Daniel", 
         a: [{t: "Morgens", p: 1}, {t: "Mittags", p: 2}, {t: "Abends", p: 3}] 
     },
     { 
@@ -21,7 +20,6 @@ let aktuelleFrageIndex = 0;
 let gesamtPunkte = 0;
 
 // --- DIREKTER START ---
-// Da der Key entfernt wurde, blenden wir das Quiz sofort ein
 document.getElementById('quiz-card').classList.remove('hidden');
 zeigeFrage();
 
