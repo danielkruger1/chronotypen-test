@@ -82,7 +82,7 @@ function beenden() {
     // Typ bestimmen
     let typ = "";
     if (gesamtPunkte <= 16) typ = "Eule";
-    else if (gesamtPunkte >= 23) typ = "Lerche";
+    else if (gesamtPunkte >= 24) typ = "Lerche";
     else typ = "Mischtyp";
 
     document.getElementById('typ-name').innerText = typ;
