@@ -19,8 +19,8 @@ const fragen = [
         a: [{t: "Sehr gering", p: 1}, {t: "Ziemlich gering", p: 2}, {t: "Ziemlich gut", p: 3}, {t: "Sehr gut", p: 4}] 
     },
     { 
-        q: "In einer Nacht musst Du für eine Nachtwache zwischen 4 und 6 Uhr wach sein. Am darauffolgenden Tag hast du keine Verpflichtungen. Was würdest du am ehesten tun?", 
-        a: [{t: "Ich werde erst nach der Nachtwache zu Bett zu gehen", p: 1}, {t: "Ich werde vorher ein Nickerchen machen und nach der Nachtwache schlafen", p: 2}, {t: "Ich werde vorher richtig schlafen und hinterher noch ein Nickerchen machen", p: 3}, {t: "Ich werde nur vorher schlafen", p: 4}] 
+        q: "Am nächsten Tag hast du eine mental anpruchsvolle Klausur. Wann würdest du Sie am liebsten schreiben um in Bestform zu sein?", 
+        a: [{t: "8 – 10 Uhr", p: 4}, {t: "11 – 13 Uhr", p: 3}, {t: "15 – 17 Uhr", p: 2}, {t: "19 – 21 Uhr", p: 1}] 
     },
     { 
         q: "Wenn Du am folgenden Tag keinerlei Verpflichtungen hast, wann gehst Du dann - verglichen mit Deiner üblichen Schlafenszeit – zu Bett?", 
